@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-color: hsl(0, 0%, 94%);
+
+    caret-color: transparent;
+}
+
+
+.main-container {
+    width: 40%;
+    height: 550px;
+
+    background-color: white;
+
+    border-radius: 20px 20px 200px 20px;
+    padding: 30px;
+}
+
+.input-fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-weight: 700;
+    border-bottom: 2px solid hsl(0, 0%, 86%);
+    padding-bottom: 30px;
+}
+
+.day {
+    color: grey;
+    padding: 10px 10px 0px 10px;
+}
+
+.day > :first-child {
+    letter-spacing: 3px;
+}
+
+.month {
+    color: grey;
+    padding: 10px 10px 0px 10px
+}
+
+.month > :first-child {
+    letter-spacing: 3px;
+}
+
+.year {
+    color: grey;
+    padding: 10px 10px 0px 10px
+}
+
+.year > :first-child {
+    letter-spacing: 3px;
+}
+
+
+.input {
+    border: 1px solid hsl(0, 0%, 86%);
+    font-size: 32px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    margin: 0;
+    width: 125px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    caret-color: black;
+}
+
+
+
+.result-container {
+    height: 350px;
+    word-spacing: 5px;
+    font-weight: 800;
+    font-size: 90px;
+    letter-spacing: 5px;
+    line-height: 1px;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    font-style: italic;
+    width: fit-content;
+}
+
+.result {
+    color: hsl(259, 100%, 65%);
+}
+
+
+.day-result {
+    display: flex;
+    line-height: 1px;
+
+}
+
+.month-result {
+    display: flex;
+    line-height: 1px;
+}
+
+.year-result {
+    display: flex;
+    line-height: 1px;
+}
+
