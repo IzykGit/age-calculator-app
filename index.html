@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Age calculator app</title>
+  <title>Age calculator app</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,15 +18,23 @@
       <div class="day">
         <p>DAY</p>
         <input id="day-input" class="input" placeholder="DD"></input>
+        <p id="day-error" class="error"></p>
       </div>
       <div class="month">
         <p>MONTH</p>
         <input id="month-input" class="input" placeholder="MM"></input>
+        <p id="month-error" class="error"></p>
       </div>
       <div class="year">
         <p>YEAR</p>
         <input id="year-input" class="input" placeholder="YYYY"></input>
+        <p id="year-error" class="error"></p>
       </div>
+    </div>
+
+    <div class="button-container">
+      <div class="divider"></div>
+      <button id="calculate-button" class="calculate-button"><img alt="Calculate" src="./assets/images/icon-arrow.svg"></button>
     </div>
 
 
