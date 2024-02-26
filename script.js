@@ -30,7 +30,7 @@ console.log(currentYear)
 inputs.forEach(input => {
     input.addEventListener("input",  () => {
 
-        if(!isNaN(input.value) || input == "Backspace") {
+        if(!isNaN(input.value)) {
             console.log("this is a number key", input.value)
 
             input.classList.remove('input-error')
@@ -38,7 +38,7 @@ inputs.forEach(input => {
             errors.forEach(error => error.innerHTML = "")
 
         }          
-        else if(isNaN(input)){
+        else if(isNaN(input) || input.value.trim() !== ""){
             console.log("This is not a number key")
             errors.forEach(error => error.innerHTML = "Input not a number!")
             input.value = ""

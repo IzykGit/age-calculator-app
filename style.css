@@ -75,7 +75,7 @@ body {
 @media screen and (max-width: 1200px) {
     .input {
         font-size: 15px;
-        padding: 10px 10px 10px 0px;
+        padding: 10px 0px 10px 10px;
     }
 
     .input-error {
