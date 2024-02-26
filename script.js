@@ -96,11 +96,12 @@ function getValues() {
         yearInput.classList.add('input-error')
     }
     
-    month = monthInput.value
-    year = yearInput.value
+
+    const monthCheck = monthInput.value
+    const yearCheck = yearInput.value
 
     // Checks the amount of days in a month.
-    daysInMonth = new Date(year, month + 1, 0).getDate()
+    daysInMonth = new Date(yearCheck, monthCheck + 1, 0).getDate()
     console.log(daysInMonth)
 }
 
@@ -116,6 +117,8 @@ function calculateDates() {
         dayInput.innerHTML = `${daysInMonth}`
     }
 
+    // Fetches year based on input
+    const inputDate = new Date(yearInput.value, monthInput.value, dayInput.value);
 
     // Fetches current date.
     const now = new Date()
@@ -123,11 +126,30 @@ function calculateDates() {
     month = now.getMonth() + 1
     year = now.getFullYear()
 
-    dayResult.innerHTML = day - dayInput.value;
-    monthResult.innerHTML = month - monthInput.value;
-    yearResult.innerHTML = year - yearInput.value;
 
+    // Getting the year difference
+    let yearDiff = year - inputDate.getFullYear();
+    let monthDiff = month - inputDate.getMonth();
+    let dayDiff = day - inputDate.getDate()
+
+
+    // Adjusting for month and year difference
+    if(monthDiff < 0) {
+        yearDiff--;
+        monthDiff += 12;
+    }
+    // Adjust for day difference
+    if (dayDiff < 0) {
+        monthDiff--;
+        let daysInPreviousMonth = new Date(year, month, 0).getDate();
+        dayDiff += daysInPreviousMonth;
+    }
     
+
+    // Results
+    dayResult.innerHTML = dayDiff;
+    monthResult.innerHTML = monthDiff;
+    yearResult.innerHTML = yearDiff;
 }
 
 calculate.addEventListener("click", () => {
